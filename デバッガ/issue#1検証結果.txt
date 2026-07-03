@@ -1,5 +1,19 @@
+【概容】
+OEMコードの判定処理がPowShell5系に依存しているため
+PowShell7では恐らく動かない問題
+(#1)
+
+【問題個所】
+# OEMコードページを取得して動的に設定
+$oemCodePage = [System.Globalization.CultureInfo]::CurrentCulture.TextInfo.OEMCodePage
+$psi.StandardOutputEncoding = [System.Text.Encoding]::GetEncoding($oemCodePage)
+↑ここのCurrentCulture.TextInfo.OEMCodePageがPs7の一部環境では動かなくなる可能性?
+
+【結果】
 PowerShell 7.6.3
 932 - 正常
 
 PowerShell 7.7.0-preview.2
 932 - 正常
+
+issueは解決されました
