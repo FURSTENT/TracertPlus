@@ -1,0 +1,8 @@
+        # psi.StandardOutputEncoding = [System.Text.Encoding]::GetEncoding(850)  tracert日本語版はOEM850系のことが多い
+        # OSの現在のカルチャからOEMコードページ番号（日本なら932）を動的に取得
+        $oemCodePage = [System.Globalization.CultureInfo]::CurrentCulture.TextInfo.OEMCodePage
+        $psi.StandardOutputEncoding = [System.Text.Encoding]::GetEncoding($oemCodePage)
+↑ここをごっそり差し替える(恐らく)
+※多分oemcodepageを定義してるとことコードを指定してるところが共通でその下にフォールバックが来る
+※ただ全部差し替えた方が楽
+んで現在コメントアウトしてるとこは削除する
