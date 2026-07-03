@@ -1,0 +1,5 @@
+PowerShell 7.6.3
+932 - 正常
+
+PowerShell 7.7.0-preview.2
+932 - 正常
