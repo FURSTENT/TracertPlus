@@ -1,5 +1,5 @@
 # Tracert++<br>
-# とてもつよいtracert(倒置法)<br>
+とてもつよいtracert<br>
 <br>
 【機能紹介】<br>
 tracertコマンドを強化するpowershellスクリプトです<br>
