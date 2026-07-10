@@ -1,10 +1,10 @@
 ﻿# ============================================================
 #  tracert++.ps1
-#  tracert を実行してホップを記憶 → 各ホップに ping を打って
+#  tracert を実行してホップを記憶(というか結果を参照) → 各ホップに ping を打って
 #  結果をまとめて表示するやつ
 # ============================================================
 
-# スピナー文字は "|" "/" "-" "\" だけどエスケープ地雷なので
+# スピナー文字は "|" "/" "-" "\" だけどエスケープ地獄賞なので
 # 直接コード内に書かず [char] コードポイントで安全に生成する
 $script:SpinnerFrames = @(
     [char]124,  # |
@@ -90,7 +90,7 @@ function Invoke-TracertPP {
             # 生ログをそのまま流す
             Write-Host $line
 
-            # 脇でスピナーをチラつかせる(疑似進捗)
+            # 脇でスピナーをチラつかせる　チラチラ見てただろ(幻聴)
             Write-SpinnerFrame -Col ([Console]::BufferWidth - 4)
 
             if ($line -match $hopPattern) {
@@ -262,6 +262,14 @@ while ($true) {
         Write-Host "bye" -ForegroundColor Gray
         break
     }
+
+    if ($userInput -eq 'credit' -or $userInput -eq 'credits') {
+        Write-Host "tracert++ by FURSERVER 2012"
+        Write-Host "ライセンスは CC0 CC0 1.0 Universal です、ご自由に改変してください。" 
+        Write-Host "tracertはwindowsのツールです" -ForegroundColor Gray
+        continue
+    }
+
 
     if (-not (Test-IsValidTarget -Target $userInput)) {
         Write-Host "内容が入力されていません" -ForegroundColor DarkYellow
