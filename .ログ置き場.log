@@ -16,7 +16,7 @@ function Write-SpinnerFrame {
     $script:SpinnerIndex++
 
     try {
-        $origLeft = [Console]::CursorLeft
+         $origLeft = [Console]::CursorLeft
         $origTop  = [Console]::CursorTop
 
         # 現在行の指定カラムにスピナーを描く(画面幅を超えないようclamp)
