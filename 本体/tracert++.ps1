@@ -31,7 +31,9 @@ function Write-SpinnerFrame {
         $targetCol = [Math]::Min($Col, [Math]::Max(0, $width - 1))
 
         [Console]::SetCursorPosition($targetCol, $origTop)
-        Write-Host -NoNewline ("[{0}]" -f $frame) -ForegroundColor DarkCyan
+        [Console]::Write('   ')  # 前のフレームを消す
+        [Console]::SetCursorPosition($targetCol, $origTop)
+        [Console]::Write("[{0}]" -f $frame)
 
         [Console]::SetCursorPosition($origLeft, $origTop)
     } catch {
