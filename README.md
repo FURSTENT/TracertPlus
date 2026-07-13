@@ -8,6 +8,11 @@ tracertコマンドを強化するpowershellスクリプトです<br>
 【ライセンス】<br>
 CC0です!!変えません!!<br>
 <br>
+【検証環境】<br>
+ver5.1.26100.8655 : DesktopEdition<br>
+7.7.0-preview.2 : coreEdition<br>
+7.6.3 : coreEdition<br>
+<br>
 【使い方と出力形式】<br>
 ps1をダウンロードして実行してください。そうするとプロンプトが > から ユーザー名@tracert++> になるので、IPを入力してください<br>
 tips:このスクリプトはtracert専用なので、 tracert {IPアドレス} にする必要はありません!! 単にIPを入れるだけで動きます!!<br>
