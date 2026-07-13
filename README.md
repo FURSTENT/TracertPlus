@@ -24,5 +24,5 @@ ping:OK<br>
 <br>
 〔ダウンロードはこちら〕<br>
 ⊂二二二二二二二二（ ＾ω＾）二二二<a href="https://github.com/FURSTENT/Tool_for_inserting_br_tags/releases/tag/PreR">
-  <img src="https://img.shields.io/badge/Fix2_Version-green" alt="Latest Release">
+  <img src="https://img.shields.io/badge/こ↑こ↓からダウンロード-green" alt="Latest Release">
 </a>二二二⊃
